@@ -1,6 +1,5 @@
 package leetcode.editor.cn;
 
-import com.sun.org.apache.bcel.internal.generic.NEW;
 
 /**
  * 实现 Trie (前缀树)

@@ -1,6 +1,5 @@
 package leetcode.editor.cn;
 
-import com.sun.org.apache.bcel.internal.generic.NEW;
 
 /**
  * 数组中两个数的最大异或值

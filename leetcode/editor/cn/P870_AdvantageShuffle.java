@@ -1,7 +1,6 @@
 package leetcode.editor.cn;
 
 import java.util.*;
-import java.util.stream.Collectors;
 
 /**
  * 优势洗牌

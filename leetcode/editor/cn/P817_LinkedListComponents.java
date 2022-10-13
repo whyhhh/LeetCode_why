@@ -1,10 +1,5 @@
 package leetcode.editor.cn;
 
-import jdk.nashorn.internal.ir.Flags;
-
-import javax.swing.text.StyledEditorKit;
-import java.util.TreeSet;
-import java.util.function.IntPredicate;
 
 /**
  * 链表组件

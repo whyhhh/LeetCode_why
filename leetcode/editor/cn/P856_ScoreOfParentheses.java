@@ -1,7 +1,6 @@
 package leetcode.editor.cn;
 
 import java.util.LinkedList;
-import java.util.Stack;
 
 /**
  * 括号的分数
