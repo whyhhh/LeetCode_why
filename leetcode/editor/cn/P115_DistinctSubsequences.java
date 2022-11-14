@@ -11,7 +11,7 @@ import java.time.Year;
 public class P115_DistinctSubsequences {
     public static void main(String[] args) {
         Solution solution = new P115_DistinctSubsequences().new Solution();
-        solution.numDistinct("rabbit", "rabb");
+        solution.numDistinct("rabbbit", "rabbit");
     }
 
     //leetcode submit region begin(Prohibit modification and deletion)
