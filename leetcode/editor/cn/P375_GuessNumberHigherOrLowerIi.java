@@ -9,29 +9,24 @@ package leetcode.editor.cn;
 public class P375_GuessNumberHigherOrLowerIi {
     public static void main(String[] args) {
         Solution solution = new P375_GuessNumberHigherOrLowerIi().new Solution();
-        solution.getMoneyAmount(16);
+        solution.getMoneyAmount(10);
     }
 
     //leetcode submit region begin(Prohibit modification and deletion)
     class Solution {
-        static int[][] cache = new int[201][201];
-
         public int getMoneyAmount(int n) {
-            return dfs(0, n);
-        }
-
-        int dfs(int l, int r) {
-            if (l >= r) {
-                return 0;
+            int[][] dp = new int[n + 10][n + 10];
+            for (int len = 2; len <= n; len++) {
+                for (int l = 1; l + len - 1 <= n; l++) {
+                    int r = l + len - 1;
+                    dp[l][r] = 0x3f3f3f3f;
+                    for (int i = l; i < r; i++) {
+                        int cur = i + Math.max(dp[l][i - 1], dp[i + 1][r]);
+                        dp[l][r] = Math.min(dp[l][r], cur);
+                    }
+                }
             }
-            int ans = 0x3f3f3f3f;
-            if (cache[l][r] != 0) return cache[l][r];
-            for (int i = l; i < r; i++) {
-                int cur = Math.max(dfs(l, i - 1), dfs(i + 1, r)) + i;
-                ans = Math.min(ans, cur);
-            }
-            cache[l][r] = ans;
-            return ans;
+            return dp[1][n];
         }
     }
 //leetcode submit region end(Prohibit modification and deletion)
