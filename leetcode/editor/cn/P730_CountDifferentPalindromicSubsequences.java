@@ -36,6 +36,7 @@ public class P730_CountDifferentPalindromicSubsequences {
                         int l = L[k], r = R[k];
                         if (l == r) f[i][j] = (f[i][j] + 1) % MOD;
                         else if (l == r - 1) f[i][j] = (f[i][j] + 2) % MOD;
+                        //这一步不懂
                         else f[i][j] = (f[i][j] + f[l + 1][r - 1] + 2) % MOD;
                     }
                 }
