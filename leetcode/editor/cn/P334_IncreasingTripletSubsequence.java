@@ -18,13 +18,21 @@ public class P334_IncreasingTripletSubsequence {
     class Solution {
         public boolean increasingTriplet(int[] nums) {
             int n = nums.length;
-            long[] f = new long[2];
-            f[0] = f[1] = (long) 1e19;
-            for (int i = 0; i < n; i++) {
-                int cur = nums[i];
-                if (cur > f[1]) return true;
-                else if (f[0] < cur && cur < f[1]) f[1] = cur;
-                else if (f[0] > cur) f[0] = cur;
+            int a = 0, b = 0;
+            for (int i = 1; i < n; i++) {
+                if (nums[i] > nums[a]) {
+                    if (b == 0) {
+                        b = i;
+                    } else {
+                        if (nums[i] > nums[b]) {
+                            return true;
+                        } else {
+                            b = i;
+                        }
+                    }
+                } else {
+                    a = i;
+                }
             }
             return false;
         }
