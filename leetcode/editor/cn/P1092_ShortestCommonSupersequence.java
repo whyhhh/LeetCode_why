@@ -1,5 +1,7 @@
 package leetcode.editor.cn;
 
+import java.awt.geom.CubicCurve2D;
+
 /**
  * 最短公共超序列
  *
@@ -19,7 +21,7 @@ public class P1092_ShortestCommonSupersequence {
             str1 = " " + str1;
             str2 = " " + str2;
             char[] c1 = str1.toCharArray(), c2 = str2.toCharArray();
-            int[][] f = new int[n][m];
+            int[][] f = new int[n + 10][m + 10];
             for (int i = 1; i <= n; i++) {
                 for (int j = 1; j <= m; j++) {
                     if (c1[i] == c2[j]) f[i][j] = f[i - 1][j - 1] + 1;
@@ -50,7 +52,6 @@ public class P1092_ShortestCommonSupersequence {
                 }
             }
             return sb.reverse().toString();
-
         }
     }
 //leetcode submit region end(Prohibit modification and deletion)
