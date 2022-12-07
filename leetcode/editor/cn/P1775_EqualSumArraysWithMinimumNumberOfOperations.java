@@ -34,7 +34,7 @@ public class P1775_EqualSumArraysWithMinimumNumberOfOperations {
             for (int x : nums2) ++cnt[x - 1]; // nums2 的变成 1
 
             // 从大到小枚举最大变化量 5 4 3 2 1
-            for (int i = 5, ans = 0; i >= 0; --i) {
+            for (int i = 5, ans = 0; ; --i) {
                 // 可以让 d 变为 0
                 if (i * cnt[i] >= d) return ans + (d + i - 1) / i;
 
