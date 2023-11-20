@@ -15,8 +15,8 @@ public class P1697_CheckingExistenceOfEdgeLengthLimitedPaths {
 
     //leetcode submit region begin(Prohibit modification and deletion)
     class Solution {
-        static int N = 100010;
-        static int[] p = new int[N];
+         int N = 100010;
+         int[] p = new int[N];
 
         int find(int x) {
             if (p[x] != x) p[x] = find(p[x]);

@@ -18,11 +18,11 @@ public class P864_ShortestPathToGetAllKeys {
     //leetcode submit region begin(Prohibit modification and deletion)
     class Solution {
         //最大长度、钥匙数，无穷大
-        static int N = 35, K = 6, INF = 0x3f3f3f3f;
+         int N = 35, K = 6, INF = 0x3f3f3f3f;
 
-        static int[][][] dist = new int[N][N][1 << K];
+         int[][][] dist = new int[N][N][1 << K];
         //方向坐标
-        static int[][] dirs = new int[][]{{1, 0}, {-1, 0}, {0, 1}, {0, -1}};
+         int[][] dirs = new int[][]{{1, 0}, {-1, 0}, {0, 1}, {0, -1}};
 
         public int shortestPathAllKeys(String[] g) {
             int n = g.length, m = g[0].length(), cnt = 0;

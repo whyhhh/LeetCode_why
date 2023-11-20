@@ -1,6 +1,6 @@
 package leetcode.editor.cn;
 
-import com.sun.source.tree.NewArrayTree;
+
 
 /**
  * 爬楼梯
@@ -15,9 +15,9 @@ public class P70_ClimbingStairs {
 
     //leetcode submit region begin(Prohibit modification and deletion)
     class Solution {
-        static int[] init = new int[50];
+         int[] init = new int[50];
 
-        static {
+         {
             init[1] = 1;
             init[2] = 2;
             for (int i = 3; i <= 45; i++) {

@@ -16,10 +16,10 @@ public class P691_StickersToSpellWord {
 
     //leetcode submit region begin(Prohibit modification and deletion)
     class Solution {
-        static int N = 15, INF = 20;
+         int N = 15, INF = 20;
 
         //2^15
-        static int[] f = new int[1 << N];
+         int[] f = new int[1 << N];
 
         public int minStickers(String[] ss, String t) {
             int n = ss.length, m = t.length(), mask = 1 << m;

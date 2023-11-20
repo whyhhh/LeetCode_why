@@ -21,8 +21,8 @@ public class P741_CherryPickup {
 
     //leetcode submit region begin(Prohibit modification and deletion)
     class Solution {
-        static int N = 55, INF = Integer.MIN_VALUE;
-        static int[][][] f = new int[2 * N][N][N];
+         int N = 55, INF = Integer.MIN_VALUE;
+         int[][][] f = new int[2 * N][N][N];
 
         public int cherryPickup(int[][] g) {
             int n = g.length;

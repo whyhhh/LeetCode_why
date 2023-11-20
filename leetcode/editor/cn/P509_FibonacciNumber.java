@@ -14,8 +14,8 @@ public class P509_FibonacciNumber {
 
     //leetcode submit region begin(Prohibit modification and deletion)
     class Solution {
-        static int[] cache = new int[31];
-        static {
+         int[] cache = new int[31];
+         {
             cache[0] = 0;
             cache[1] = 1;
             int  cur = 0,f1 = 0, f2 = 1;

@@ -1,8 +1,6 @@
 package leetcode.editor.cn;
 
-import com.sun.source.tree.NewArrayTree;
 
-import javax.sound.midi.MidiChannel;
 
 /**
  * 最大为 N 的数字组合
